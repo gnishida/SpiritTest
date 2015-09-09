@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleCGAParser6", "SimpleC
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleCGAParser7", "SimpleCGAParser7\SimpleCGAParser7.vcxproj", "{DA04DCF6-DF06-4002-9603-AE93F5CBA5E4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGAParser", "CGAParser\CGAParser.vcxproj", "{812CD7A1-4A77-4067-B47B-2F333F7A8722}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -103,10 +105,16 @@ Global
 		{DA04DCF6-DF06-4002-9603-AE93F5CBA5E4}.Debug|Win32.ActiveCfg = Debug|Win32
 		{DA04DCF6-DF06-4002-9603-AE93F5CBA5E4}.Debug|Win32.Build.0 = Debug|Win32
 		{DA04DCF6-DF06-4002-9603-AE93F5CBA5E4}.Debug|x64.ActiveCfg = Debug|x64
-		{DA04DCF6-DF06-4002-9603-AE93F5CBA5E4}.Debug|x64.Build.0 = Debug|x64
 		{DA04DCF6-DF06-4002-9603-AE93F5CBA5E4}.Release|Win32.ActiveCfg = Release|Win32
 		{DA04DCF6-DF06-4002-9603-AE93F5CBA5E4}.Release|Win32.Build.0 = Release|Win32
 		{DA04DCF6-DF06-4002-9603-AE93F5CBA5E4}.Release|x64.ActiveCfg = Release|Win32
+		{812CD7A1-4A77-4067-B47B-2F333F7A8722}.Debug|Win32.ActiveCfg = Debug|Win32
+		{812CD7A1-4A77-4067-B47B-2F333F7A8722}.Debug|Win32.Build.0 = Debug|Win32
+		{812CD7A1-4A77-4067-B47B-2F333F7A8722}.Debug|x64.ActiveCfg = Debug|x64
+		{812CD7A1-4A77-4067-B47B-2F333F7A8722}.Debug|x64.Build.0 = Debug|x64
+		{812CD7A1-4A77-4067-B47B-2F333F7A8722}.Release|Win32.ActiveCfg = Release|Win32
+		{812CD7A1-4A77-4067-B47B-2F333F7A8722}.Release|Win32.Build.0 = Release|Win32
+		{812CD7A1-4A77-4067-B47B-2F333F7A8722}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
