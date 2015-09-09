@@ -19,21 +19,11 @@ namespace client {
     namespace qi = boost::spirit::qi;
     namespace ascii = boost::spirit::ascii;
 
-    ///////////////////////////////////////////////////////////////////////////
-    //  Our mini XML tree representation
-    ///////////////////////////////////////////////////////////////////////////
-    //[tutorial_xml1_structures
     struct mini_xml;
 
-    typedef
-        boost::variant<
-            boost::recursive_wrapper<mini_xml>
-          , std::string
-        >
-    mini_xml_node;
+    typedef boost::variant<boost::recursive_wrapper<mini_xml>, std::string> mini_xml_node;
 
-    struct mini_xml
-    {
+    struct mini_xml {
         std::string name;                           // tag name
         std::vector<mini_xml_node> children;        // children
     };
@@ -59,8 +49,7 @@ namespace client {
     }
 
     struct mini_xml_printer {
-        mini_xml_printer(int indent = 0)
-          : indent(indent)
+        mini_xml_printer(int indent = 0) : indent(indent)
         {
         }
 

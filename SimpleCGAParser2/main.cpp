@@ -19,10 +19,15 @@ namespace client {
     namespace qi = boost::spirit::qi;
     namespace ascii = boost::spirit::ascii;
 
-    struct cga_rule {
-        std::string lhs;                           // tag name
+	struct rhs_statement {
 		std::string op;
 		double param_value;
+		std::string successor_shape;
+	};
+
+    struct cga_rule {
+        std::string lhs;                           // tag name
+		rhs_statement rhs;
     };
     //]
 }
@@ -31,10 +36,16 @@ namespace client {
 // to make it a first-class fusion citizen
 //[tutorial_xml1_adapt_structures
 BOOST_FUSION_ADAPT_STRUCT(
-    client::cga_rule,
-    (std::string, lhs)
+    client::rhs_statement,
     (std::string, op)
 	(double, param_value)
+	(std::string, successor_shape)
+)
+
+BOOST_FUSION_ADAPT_STRUCT(
+    client::cga_rule,
+    (std::string, lhs)
+    (client::rhs_statement, rhs)
 )
 //]
 
@@ -56,22 +67,24 @@ namespace client {
             using phoenix::push_back;
 
 			start =
-				lhs	>> "-->"
-				>> op
-				>> "("
-				>> param_value
-				>> ")"
+				lhs	>> "-->" >> rhs;
+
+			rhs =
+				op >> "(" >> param_value >> ")" >> successor_shape
 			;
 
 			lhs = char_("a-zA-Z") >> *(char_("a-zA-Z"));
 			op = char_("a-zA-Z") >> *(char_("a-zA-Z"));
 			param_value = double_;
+			successor_shape = char_("a-zA-Z") >> *(char_("a-zA-Z"));
         }
 
         qi::rule<Iterator, cga_rule(), ascii::space_type> start;
         qi::rule<Iterator, std::string(), ascii::space_type> lhs;
+		qi::rule<Iterator, rhs_statement(), ascii::space_type> rhs;
         qi::rule<Iterator, std::string(), ascii::space_type> op;
         qi::rule<Iterator, double(), ascii::space_type> param_value;
+        qi::rule<Iterator, std::string(), ascii::space_type> successor_shape;
     };
     //]
 }
@@ -117,7 +130,7 @@ int main(int argc, char **argv) {
         std::cout << "-------------------------\n";
         std::cout << "Parsing succeeded\n";
         std::cout << "-------------------------\n";
-		std::cout << cga_rule.lhs << " --> " << cga_rule.op << "(" << cga_rule.param_value << ")" << std::endl;
+		std::cout << cga_rule.lhs << " --> " << cga_rule.rhs.op << "(" << cga_rule.rhs.param_value << ") " << cga_rule.rhs.successor_shape << std::endl;
         return 0;
     } else {
         std::string::const_iterator some = iter+30;
