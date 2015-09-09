@@ -1,2 +1,2 @@
-SideFacade --> split(y){ 2: Floor }
+SideFacade --> extrude(3)
     
