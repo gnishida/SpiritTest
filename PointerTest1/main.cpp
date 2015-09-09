@@ -61,6 +61,8 @@ int main(int argc, const char *argv[])
     const char *l = std::end(input);
 	Expr* result;
     if (qi::phrase_parse(f, l, p, ascii::space, result)) {
+		// ここでbreakして、resultを見ると、
+		// Plusオブジェクトであることが分かる。
 		std::cout << "OK" << std::endl;
 	}
 }
