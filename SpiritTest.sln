@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleCGAParser2", "SimpleC
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleCGAParser3", "SimpleCGAParser3\SimpleCGAParser3.vcxproj", "{EFB8F0A7-90BE-4421-B2C4-631F5AC23B01}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleCGAParser4", "SimpleCGAParser4\SimpleCGAParser4.vcxproj", "{44585817-B445-4F63-BC76-AAAC2166934E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -63,10 +65,16 @@ Global
 		{EFB8F0A7-90BE-4421-B2C4-631F5AC23B01}.Debug|Win32.ActiveCfg = Debug|Win32
 		{EFB8F0A7-90BE-4421-B2C4-631F5AC23B01}.Debug|Win32.Build.0 = Debug|Win32
 		{EFB8F0A7-90BE-4421-B2C4-631F5AC23B01}.Debug|x64.ActiveCfg = Debug|x64
-		{EFB8F0A7-90BE-4421-B2C4-631F5AC23B01}.Debug|x64.Build.0 = Debug|x64
 		{EFB8F0A7-90BE-4421-B2C4-631F5AC23B01}.Release|Win32.ActiveCfg = Release|Win32
 		{EFB8F0A7-90BE-4421-B2C4-631F5AC23B01}.Release|Win32.Build.0 = Release|Win32
 		{EFB8F0A7-90BE-4421-B2C4-631F5AC23B01}.Release|x64.ActiveCfg = Release|Win32
+		{44585817-B445-4F63-BC76-AAAC2166934E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{44585817-B445-4F63-BC76-AAAC2166934E}.Debug|Win32.Build.0 = Debug|Win32
+		{44585817-B445-4F63-BC76-AAAC2166934E}.Debug|x64.ActiveCfg = Debug|x64
+		{44585817-B445-4F63-BC76-AAAC2166934E}.Debug|x64.Build.0 = Debug|x64
+		{44585817-B445-4F63-BC76-AAAC2166934E}.Release|Win32.ActiveCfg = Release|Win32
+		{44585817-B445-4F63-BC76-AAAC2166934E}.Release|Win32.Build.0 = Release|Win32
+		{44585817-B445-4F63-BC76-AAAC2166934E}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
