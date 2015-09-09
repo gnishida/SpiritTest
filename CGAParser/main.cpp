@@ -1,4 +1,15 @@
-﻿#include "CGAParser.h"
+﻿/*************************************************************************
+ * CityEngineのCGAファイルのparser
+ *
+ * まだまだ未完成。
+ * - 各行の末尾にセミコロンを記載する必要がある。
+ *   (改行が空白と同様にスキップされるため、改行で区切ることができない。)
+ * - 各行に、複数のoperationを記載できない。
+ *
+ */
+
+
+#include "CGAParser.h"
 
 int main(int argc, char **argv) {
     char const* filename;
@@ -27,14 +38,13 @@ int main(int argc, char **argv) {
     cga::cga_grammar<std::string::const_iterator> g;
     cga::CGARules cga_rules; // Our tree
 
-    using boost::spirit::ascii::space;
     std::string::const_iterator iter = storage.begin();
     std::string::const_iterator end = storage.end();
 
 	/// EmployeeParserと同様、3番目の引数がgrammarだ。つまり、mini_xml_grammarを使ってparseする。
 	// 4番目の引数はskipする文字。つまり、空白をskipする
 	// 5番目の引数に結果が返却される。
-    bool r = phrase_parse(iter, end, g, space, cga_rules);
+    bool r = phrase_parse(iter, end, g, boost::spirit::ascii::space, cga_rules);
 
     if (r && iter == end) {
         std::cout << "-------------------------\n";

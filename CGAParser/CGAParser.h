@@ -70,7 +70,7 @@ namespace cga {
 			start =	+(lhs
 				>> "-->"
 				>> statement
-				>> ";")							
+				>> qi::char_(";"))							
 				;
 
 			statement = (
