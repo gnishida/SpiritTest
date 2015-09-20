@@ -16,7 +16,7 @@ main()
 	myeval::variables.add("PI", 3.1415923f);
 
     std::string str;
-    double result;
+    float result;
     while (std::getline(std::cin, str))
     {
         if (str.empty() || str[0] == 'q' || str[0] == 'Q')

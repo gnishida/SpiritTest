@@ -59,7 +59,7 @@ namespace myeval {
                 ;
 
             factor =
-				( qi::double_ | variables )     [_val = _1]
+				( qi::float_ | variables )      [_val = _1]
                 |   '(' >> expression           [_val = _1] >> ')'
                 |   ('-' >> factor              [_val = -_1])
                 |   ('+' >> factor              [_val = _1])
