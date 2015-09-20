@@ -30,13 +30,13 @@ namespace myeval {
     namespace qi = boost::spirit::qi;
     namespace ascii = boost::spirit::ascii;
 
-	static qi::symbols<char, double> variables;
+	static qi::symbols<char, float> variables;
 
     ///////////////////////////////////////////////////////////////////////////
     //  Our calculator grammar
     ///////////////////////////////////////////////////////////////////////////
     template <typename Iterator>
-    struct calculator : qi::grammar<Iterator, double(), ascii::space_type>
+    struct calculator : qi::grammar<Iterator, float(), ascii::space_type>
     {
         calculator() : calculator::base_type(expression)
         {
@@ -66,6 +66,6 @@ namespace myeval {
                 ;
         }
 
-        qi::rule<Iterator, double(), ascii::space_type> expression, term, factor;
+        qi::rule<Iterator, float(), ascii::space_type> expression, term, factor;
     };
 };

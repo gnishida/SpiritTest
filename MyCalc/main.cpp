@@ -13,7 +13,7 @@ main()
 
     myeval::calculator<std::string::const_iterator> calc; // Our grammar
 
-	myeval::variables.add("PI", 3.1415923);
+	myeval::variables.add("PI", 3.1415923f);
 
     std::string str;
     double result;
